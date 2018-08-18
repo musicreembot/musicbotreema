@@ -264,18 +264,18 @@ var prefix = "R";
   var argresult = args.join(' ');
   if (message.author.id == '395462979115679755' ) return;
  
-if (message.content.startsWith(prefix + 'stream')) {
+if (message.content.startsWith(prefix + 'setstream')) {
   client.user.setGame(argresult, "https://www.twitch.tv/sytra_ayman");
     message.channel.sendMessage(`**${argresult}** :تم تغيير الحالة الى ستريمنج`)
 } else
  
-if (message.content.startsWith(prefix + 'name')) {
+if (message.content.startsWith(prefix + 'setname')) {
   client.user.setUsername(argresult).then
       message.channel.sendMessage(`**${argresult}** : تم تغير الأسم`)
   return message.reply("**لا تستطيع تغير الأسم الا بعد ساعتين**");
 } else
 
-if (message.content.startsWith(prefix + 'img')) {
+if (message.content.startsWith(prefix + 'setimg')) {
   client.user.setAvatar(argresult);
     message.channel.sendMessage(`**${argresult}** : تم تغير صورة البوت`);
 }
